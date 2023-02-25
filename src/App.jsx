@@ -2,13 +2,14 @@ import { useState } from "react";
 
 import "./App.css";
 import { useEffect } from "react";
+import.meta.env.VITE_API_URL;
 
 function App() {
-  const proxy = "http://localhost:8081/ping";
+  const proxy = import.meta.env.VITE_API_URL;
   const [data, setData] = useState("");
 
   const fetchData = async () => {
-    const response = await fetch(proxy);
+    const response = await fetch(`${proxy}/api/ping`);
     const data = await response.json();
     setData(data);
   };
