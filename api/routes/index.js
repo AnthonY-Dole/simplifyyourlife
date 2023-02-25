@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = async function (fastify, opts) {
-  fastify.get("/ping", async function (request, reply) {
+  fastify.get("/api/ping", async function (request, reply) {
     return { pong: "pong" };
   });
 };
