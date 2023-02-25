@@ -1,10 +1,8 @@
-"use strict";
-
-// Read the .env file.
-require("dotenv").config();
+import * as dotenv from "dotenv";
+dotenv.config();
 
 // Require the framework
-const Fastify = require("fastify");
+import Fastify from "fastify";
 
 // Instantiate Fastify with some config
 const app = Fastify({
