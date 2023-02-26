@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import Hero from "../components/Hero";
+import Card from "../components/Card";
+import { SimpleGrid } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 const { VITE_API_URL } = import.meta.env;
 const Home = () => {
   const proxy = VITE_API_URL;
@@ -13,7 +17,26 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  return <>{data.pong}</>;
+  return (
+    <>
+      <Hero />
+      <h1>{data.pong}</h1>
+      <SimpleGrid minChildWidth="250px" spacing="40px">
+        <Box>
+          <Card title="Link Shortener" />
+        </Box>
+        <Box>
+          <Card title="QR Code generator" />
+        </Box>
+        <Box>
+          <Card title="Youtube converter" />
+        </Box>
+        <Box>
+          <Card title="password Strength Checker" />
+        </Box>
+      </SimpleGrid>
+    </>
+  );
 };
 
 export default Home;

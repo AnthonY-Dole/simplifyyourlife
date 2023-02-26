@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 import { Navigate, useRoutes } from "react-router-dom";
-
+import AppLayout from "../layout/AppLayout";
 const Loadable = (Component) => (props) => {
   return (
     <>
@@ -15,7 +15,8 @@ export default function Router() {
   return useRoutes([
     {
       path: "/",
-      element: <Home />,
+      element: <AppLayout />,
+      children: [{ path: "/", element: <Home /> }],
     },
   ]);
 }
