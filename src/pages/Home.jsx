@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <h1>{data.pong}</h1>
+
       <SimpleGrid minChildWidth="250px" spacing="40px">
         <Box>
           <Card title="Link Shortener" />

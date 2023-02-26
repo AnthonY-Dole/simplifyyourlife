@@ -3,6 +3,7 @@
 const path = require("path");
 const AutoLoad = require("@fastify/autoload");
 const Cors = require("@fastify/cors");
+
 module.exports = async function (fastify, opts) {
   // Place here your custom code!
 

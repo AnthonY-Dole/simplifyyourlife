@@ -1,7 +1,16 @@
-"use strict";
+const apiRoutes = async (fastify, options) => {
+  fastify.register(require("./url"), { prefix: "urls" });
 
-module.exports = async function (fastify, opts) {
-  fastify.get("/api/ping", async function (request, reply) {
-    return { pong: "pong" };
+  fastify.get("/", async (request, reply) => {
+    return {
+      message: "Fastify API is on fire",
+    };
+  });
+  fastify.get("/ping", async (request, reply) => {
+    return {
+      message: "pong",
+    };
   });
 };
+
+module.exports = apiRoutes;
