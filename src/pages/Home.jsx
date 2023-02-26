@@ -3,9 +3,9 @@ import Hero from "../components/Hero";
 import Card from "../components/Card";
 import { SimpleGrid } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
-const { VITE_API_URL } = import.meta.env;
+import.meta.env.VITE_API_URL;
 const Home = () => {
-  const proxy = VITE_API_URL;
+  const proxy = import.meta.env.VITE_API_URL;
   const [data, setData] = useState("");
 
   const fetchData = async () => {
