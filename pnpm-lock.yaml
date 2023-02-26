@@ -11,6 +11,7 @@ specifiers:
   '@types/react': ^18.0.27
   '@types/react-dom': ^18.0.10
   '@vitejs/plugin-react': ^3.1.0
+  dotenv: ^16.0.3
   fastify: ^4.0.0
   fastify-cli: ^4.4.0
   fastify-plugin: ^3.0.0
@@ -29,6 +30,7 @@ dependencies:
   '@fastify/autoload': 5.7.1
   '@fastify/cors': 8.2.0
   '@fastify/sensible': 4.1.0
+  dotenv: 16.0.3
   fastify: 4.13.0
   fastify-cli: 4.4.0
   fastify-plugin: 3.0.1
