@@ -1,5 +1,5 @@
 const apiRoutes = async (fastify, options) => {
-  fastify.register(require("./url"), { prefix: "urls" });
+  fastify.register(require("./url"), { prefix: "/api/urls" });
 
   fastify.get("/api", async (request, reply) => {
     return {
