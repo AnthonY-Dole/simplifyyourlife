@@ -16,9 +16,13 @@ export default function Router() {
     {
       path: "/",
       element: <AppLayout />,
-      children: [{ path: "/", element: <Home /> }],
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "shortner", element: <Shortner /> },
+      ],
     },
   ]);
 }
 
 const Home = Loadable(lazy(() => import("../pages/Home")));
+const Shortner = Loadable(lazy(() => import("../pages/ShortnerPage")));
